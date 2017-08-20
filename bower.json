@@ -1,0 +1,20 @@
+{
+  "name": "baseballapp",
+  "description": "Baseball App",
+  "main": "",
+  "authors": [
+    "Chatthana Janethanakarn <chattana.j@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "css-reset": "^2.5.1"
+  }
+}
