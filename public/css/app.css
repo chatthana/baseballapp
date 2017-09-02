@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*
+@import url(https://fonts.googleapis.com/css?family=Kanit:300,300i,400,400i,500,500i,600);/*
   Ivan Gabriele : http://www.ivangabriele.com/css-reset/
   v2.5.1 | 20141120
   License: MIT
@@ -74,37 +74,39 @@ table {
 }
 textarea {
   resize: none;
-}.wrapper,
-.clearfix {
+}* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+.wrapper, .clearfix, .row {
   position: relative;
   width: 1080px;
   margin: 0 auto;
 }
 
-.wrapper:before,
-.clearfix:before,
-.wrapper:after,
-.clearfix:after {
+.wrapper.auto, .auto.clearfix, .auto.row {
+  width: auto;
+}
+
+.wrapper:before, .clearfix:before, .row:before, .wrapper:after, .clearfix:after, .row:after {
   content: '';
   display: table;
 }
 
-.wrapper:after,
-.clearfix:after {
+.wrapper:after, .clearfix:after, .row:after {
   clear: both;
 }
 
-.clearfix {
+.clearfix, .row {
   width: auto;
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
 }
 
@@ -162,10 +164,63 @@ p {
   background-color: #2666A8;
 }
 
-html,
-body {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-  font-size: 100%;
+.row {
+  margin: 10px 0;
 }
 
+.row.pure {
+  margin: 0;
+}
+
+[class^="grid-"] {
+  position: relative;
+  padding: 0 10px;
+  float: left;
+}
+
+.grid-12 {
+  width: 100%;
+}
+
+.grid-11 {
+  width: calc(100%/12 * 11);
+}
+
+.grid-10 {
+  width: calc(100%/12 * 10);
+}
+
+.grid-9, .grid-quarter-to {
+  width: 75%;
+}
+
+.grid-6 {
+  width: 50%;
+}
+
+.grid-3, .grid-quarter-past {
+  width: 25%;
+}
+
+.grid-2 {
+  width: calc(100%/12 * 2);
+}
+
+.grid-1 {
+  width: calc(100%/12);
+}
+
+html, body {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  color: #fff;
+  background: url("../images/IMG_9487.jpg") no-repeat center;
+  height: 100%;
+  background-size: cover;
+}
+
+#app {
+  position: relative;
+  height: 100%;
+}

@@ -1,7 +1,9 @@
 <template>
     <nav role="navigation">
         <ul>
-            <li><a href="/">About us</a></li>
+            <li><a href="/">ติดต่อเรา</a></li>
+            <li><a href="/">แจ้งชำระค่าสินค้า</a></li>
+            <li><a href="/">ตรวจสอบสถานะสินค้า</a></li>
         </ul>
     </nav>
 </template>

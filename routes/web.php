@@ -11,10 +11,13 @@
 |
 */
 
+View::addExtension('html', 'php');
 
 Route::get('/', function() {
     return view('spa.index');
 });
+
+Route::get('/responder', 'SiteController@responder');
 
 Route::get('{catchall}', function($exception) {
     return view('spa.index');

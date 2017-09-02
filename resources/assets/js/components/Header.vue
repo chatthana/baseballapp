@@ -1,9 +1,18 @@
 <template>
     <header>
-        <div class="wrapper">
-            <a href="/" class="logo"><h1>{{message}}</h1></a>
-            <button type="button" class="button blue" v-on:click="getData()">Fetch some data</button>
-            <navbar></navbar>
+        <div class="wrapper auto">
+            <div class="row">
+                <div class="grid-1">
+                    <a href="/" class="logo"><img src="/images/Main-Logo.png" /></h1></a>
+                </div>
+                <div class="grid-10" style="border-bottom:2px solid #fff;">
+                    <navbar></navbar>
+                </div>
+                <div class="grid-1">
+                    <cart></cart>
+                </div>
+            </div>
+            
         </div>
     </header>
 </template>
@@ -13,12 +22,15 @@
         position:relative;
         padding:10px;
         line-height:40px;
-        border-bottom:1px solid #dadada;
     }
 
     header a.logo {
         display:block;
         float:left;
+    }
+
+    header a.logo img {
+        max-width:86px;
     }
 
     header a.logo h1 {
@@ -29,10 +41,12 @@
 
 <script>
     import Navbar from './Navbar.vue';
+    import Cart from './Cart';
 
     export default {
         components: {
-            navbar: Navbar
+            navbar: Navbar,
+            cart: Cart
         },
         mounted() {
             console.log('Component mounted.')

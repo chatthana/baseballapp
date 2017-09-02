@@ -1,7 +1,18 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
 .wrapper {
     position: relative;
     width: 1080px;
     margin: 0 auto;
+    &.auto {
+        width: auto;
+    }
     &:before, &:after {
         content: '';
         display: table; 
@@ -69,4 +80,50 @@ p {
     &.blue {
         background-color: #2666A8;
     }
+}
+
+.row {
+    @extend .clearfix;
+    margin: 10px 0;
+    &.pure {
+        margin:0;
+    }
+}
+
+[class^="grid-"] {
+    position: relative;
+    padding: 0 10px;
+    float: left;
+}
+
+.grid-12 {
+    width: 100%;
+}
+
+.grid-11 {
+    width: calc(100%/12 * 11)
+}
+
+.grid-10 {
+    width: calc(100%/12 * 10)
+}
+
+.grid-9, .grid-quarter-to {
+    width: 75%;
+}
+
+.grid-6 {
+    width: 50%;
+}
+
+.grid-3, .grid-quarter-past {
+    width: 25%;
+}
+
+.grid-2 {
+    width: calc(100%/12 * 2);
+}
+
+.grid-1 {
+    width: calc(100%/12)
 }

@@ -18,11 +18,11 @@ Vue.use(VueRouter);
  */
 
 const App = Vue.component('App', require('./components/App.vue'));
-const Example = Vue.component('Example', require('./components/Example.vue'));
+const Home = Vue.component('Example', require('./components/Home.vue'));
 
 const routes = [
     {path:'/', component: App, children: [
-        {path: '', component: Example}
+        {path: '', component: Home}
     ]},
     
 ];

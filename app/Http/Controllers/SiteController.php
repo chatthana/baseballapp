@@ -10,7 +10,10 @@ class SiteController extends Controller
         return view('site.index');
     }
 
-    public function fucker() {
-        echo "Fucker";
+    public function responder() {
+        return response()->json([
+            'message' => 'Success',
+            'status' => 200
+        ]);
     }
 }
